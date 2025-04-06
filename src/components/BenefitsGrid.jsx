@@ -23,7 +23,7 @@ export default function BenefitsGrid() {
         <div className="absolute inset-0 opacity-5 pattern-dots pattern-red-500 pattern-size-4" />
         
         <div className="container mx-auto px-4 relative">
-          <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in-up">
+          <h2 className="text-3xl font-bold text-center mb-12">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-400">
               Why Choose CineBook?
             </span>
@@ -39,7 +39,7 @@ export default function BenefitsGrid() {
                 <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                 
                 <div className="relative z-10">
-                  <div className="text-red-600 text-5xl mb-4 animate-bounce-in">
+                  <div className="text-red-600 text-5xl mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-800">

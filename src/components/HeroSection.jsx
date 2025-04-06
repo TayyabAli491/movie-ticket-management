@@ -32,17 +32,17 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 text-center px-4 space-y-8">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in-up">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600">
             Experience Cinema Magic
           </span>
         </h1>
         
-        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">
+        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto delay-100">
           Book tickets for the latest blockbusters in premium comfort. Your perfect movie experience starts here!
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-200">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 delay-200">
           <Link 
             to="/signup" 
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-red-500/30"
