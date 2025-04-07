@@ -2,23 +2,22 @@ const TMDB_API_KEY = '0934411ca5fe7951b44d70a6b26b43d6';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
 
-export const fetchNowPlayingMovies = async () => {
-  try {
-    const response = await fetch(
-      `${TMDB_BASE_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&language=en-US&page=1`
-    );
-
-    if (!response.ok) {
-      throw new Error('Failed to fetch movies');
+export const fetchNowPlayingMovies = async (page = 1) => {
+    try {
+      const response = await fetch(
+        `${TMDB_BASE_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&language=en-US&page=${page}`
+      );
+  
+      if (!response.ok) {
+        throw new Error('Failed to fetch movies');
+      }
+  
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching movies:', error);
+      throw error;
     }
-
-    const data = await response.json();
-    return data.results;
-  } catch (error) {
-    console.error('Error fetching movies:', error);
-    throw error;
-  }
-};
+  };
 
 export const getMoviePoster = (path) => {
   return path ? `${TMDB_IMAGE_BASE_URL}/w500${path}` : 'https://via.placeholder.com/500x750?text=Poster+Not+Available';
