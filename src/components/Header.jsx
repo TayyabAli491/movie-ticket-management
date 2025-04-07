@@ -39,6 +39,21 @@ export default function Header() {
             >
               Home
             </Link>
+            <Link  
+              className="px-4 py-2 text-md font-medium text-gray-300 hover:text-red-400 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-600 hover:after:w-full after:transition-all"
+            >
+              Movies
+            </Link>
+            <Link 
+              className="px-4 py-2 text-md font-medium text-gray-300 hover:text-red-400 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-600 hover:after:w-full after:transition-all"
+            >
+              About
+            </Link>
+            <Link 
+              className="px-4 py-2 text-md font-medium text-gray-300 hover:text-red-400 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-600 hover:after:w-full after:transition-all"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* Auth Buttons - Desktop */}
