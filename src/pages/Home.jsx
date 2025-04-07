@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchNowPlayingMovies, getMoviePoster } from '../services/tmdb';
 
@@ -116,11 +117,13 @@ export default function Home() {
                         <span>{formatRuntime(movie.runtime)}</span>
                       </div>
                     </div>
-                    <button className="w-full mt-4 bg-gradient-to-r from-red-500 to-red-600 
-                      text-white px-4 py-2 rounded-xl hover:from-red-600 hover:to-red-500 
-                      transition-all duration-300">
+                    <Link to={`/book/${movie.id}`}
+                      className="w-full mt-4 bg-gradient-to-r from-red-500 to-red-600 
+                        text-white px-4 py-2 rounded-xl hover:from-red-600 hover:to-red-500 
+                        transition-all duration-300 block text-center"
+                    >
                       Book Tickets
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Home from './pages/Home';
+import BookingPage from './pages/BookingPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/book/:movieId" element={<BookingPage />} />
         </Route>
       </Routes>
     </Router>

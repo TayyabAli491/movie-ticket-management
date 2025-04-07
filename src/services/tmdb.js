@@ -17,7 +17,24 @@ export const fetchNowPlayingMovies = async (page = 1) => {
       console.error('Error fetching movies:', error);
       throw error;
     }
-  };
+};
+
+export const getMovieDetails = async (movieId) => {
+    try {
+      const response = await fetch(
+        `${TMDB_BASE_URL}/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US`
+      );
+  
+      if (!response.ok) {
+        throw new Error('Failed to fetch movie details');
+      }
+  
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching movie details:', error);
+      throw error;
+    }
+};
 
 export const getMoviePoster = (path) => {
   return path ? `${TMDB_IMAGE_BASE_URL}/w500${path}` : 'https://via.placeholder.com/500x750?text=Poster+Not+Available';
@@ -64,7 +81,7 @@ export const fetchRandomMovies = async () => {
     return path ? `${TMDB_IMAGE_BASE_URL}/${size}${path}` : null;
   };
   
-  
+
   // Helper function to shuffle array
   const shuffleArray = (array) => {
     return array.sort(() => Math.random() - 0.5);
